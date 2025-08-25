@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset, DataLoader, WeightedRandomSampler
-from hydra_utils.seeder import seed_worker
+from seeder import seed_worker
 from transformers import BatchFeature
 from PIL import Image
 import numpy as np

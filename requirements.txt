@@ -1,0 +1,11 @@
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==2.5.1+cu124
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torchvision==0.20.1+cu124
+pandas==2.2.3
+scikit-learn==1.6.1
+monai==1.4.0
+pandas
+matplotlib
+seaborn
+nibabel==5.3.2

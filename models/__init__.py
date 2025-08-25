@@ -1,2 +1,2 @@
-from .fusion_module import *
+from .model import *
 from .classifier import *
