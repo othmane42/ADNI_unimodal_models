@@ -1,0 +1,42 @@
+dataset_name: "ADNI MRI dataset New"
+data_path: "/gpfs/projects/acad/mmfusion/datasets/adni/ADNIDenoise/AD_CN_clinical_duplicates_aligned.csv" #"/home_nfs/amelo/projects/feder/cohort1/ADNI_dataset_MRI_patient_wise_AD_CN.csv"
+image_column: "nii_path" #"mri_npy_path"
+image_type : "nii.gz" # available option are mri , image
+eeg_column : null
+text_columns: null
+target_column: "Group"
+subject_column: "Subject"
+train_val_size: 0.1
+train_test_size: 0.1
+normalize: True
+make_dummies: False
+drop_duplicates: False
+patient_based_split: True
+nunique_cat_values: [2, 2, 5, 2, 7, 2, 3, 3, 4, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+
+cat_cols: ['PTRACCAT', 'PTGENDER' , 'PTHAND', 'PTMARRY', 'PTNOTRT', 'PTTLANG','MH14ALCH', 'MH17MALI', 'MH16SMOK',
+       'MH15DRUG', 'MH4CARD', 'MHPSYCH', 'MH2NEURL', 'MH6HEPAT', 'MH12RENA','DSPANFOR',
+       'DSPANBAC','CDGLOBAL','BCFAQ','BCDEPRES']
+cat_cols_dummies:  ['PTRACCAT_2', 'PTRACCAT_4', 'PTRACCAT_5', 'PTRACCAT_6',
+       'PTGENDER_1.0', 'PTGENDER_2.0', 'PTHAND_1.0', 'PTHAND_2.0',
+       'PTMARRY_1.0', 'PTMARRY_2.0', 'PTMARRY_3.0', 'PTMARRY_4.0',
+       'PTMARRY_5.0', 'PTNOTRT_0.0', 'PTNOTRT_1.0', 'PTTLANG_1.0',
+       'PTTLANG_2.0', 'MH14ALCH_0', 'MH14ALCH_1', 'MH17MALI_0', 'MH17MALI_1',
+       'MH16SMOK_0', 'MH16SMOK_1', 'MH15DRUG_0', 'MH15DRUG_1', 'MH4CARD_0',
+       'MH4CARD_1', 'MHPSYCH_0', 'MHPSYCH_1', 'MH2NEURL_0', 'MH2NEURL_1',
+       'MH6HEPAT_0', 'MH6HEPAT_1', 'MH12RENA_0', 'MH12RENA_1', 'DSPANFOR_0.0',
+       'DSPANFOR_2.0', 'DSPANFOR_4.0', 'DSPANFOR_5.0', 'DSPANFOR_6.0',
+       'DSPANFOR_7.0', 'DSPANFOR_8.0', 'DSPANFOR_9.0', 'DSPANFOR_10.0',
+       'DSPANFOR_11.0', 'DSPANFOR_12.0', 'DSPANBAC_1.0', 'DSPANBAC_2.0',
+       'DSPANBAC_3.0', 'DSPANBAC_4.0', 'DSPANBAC_5.0', 'DSPANBAC_6.0',
+       'DSPANBAC_7.0', 'DSPANBAC_8.0', 'DSPANBAC_9.0', 'DSPANBAC_10.0',
+       'DSPANBAC_11.0', 'DSPANBAC_12.0', 'CDGLOBAL_0.0', 'CDGLOBAL_0.5',
+       'CDGLOBAL_1.0', 'CDGLOBAL_2.0', 'BCFAQ_0.0', 'BCFAQ_1.0',
+       'BCDEPRES_0.0']
+cont_cols: ['VSWEIGHT', 'VSHEIGHT','MMSCORE', 'TRAASCOR',
+       'TRABSCOR', 'TRABERRCOM','MMSCORE', 'TRAASCOR',
+       'TRABSCOR', 'TRABERRCOM','CATANIMSC',"BNTTOTAL",'PTEDUCAT','PTDOBYY']
+
+# "/gpfs/projects/acad/mmfusion/datasets/adni/ADNIDenoise/AD_CN_df.csv"
+
+
