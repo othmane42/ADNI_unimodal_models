@@ -1,13 +1,9 @@
 dataset_name: "ADNI MRI dataset New"
-data_path: "/gpfs/projects/acad/mmfusion/datasets/adni/ADNIDenoise/AD_CN_clinical_duplicates_aligned.csv" #"/home_nfs/amelo/projects/feder/cohort1/ADNI_dataset_MRI_patient_wise_AD_CN.csv"
-image_column: "nii_path" #"mri_npy_path"
-image_type : "nii.gz" # available option are mri , image
-eeg_column : null
-text_columns: null
+data_path: "AD_CN_clinical.csv" 
+image_column: "nii_path" 
+image_type : "nii.gz" 
 target_column: "Group"
 subject_column: "Subject"
-train_val_size: 0.1
-train_test_size: 0.1
 normalize: True
 make_dummies: False
 drop_duplicates: False
@@ -35,8 +31,7 @@ cat_cols_dummies:  ['PTRACCAT_2', 'PTRACCAT_4', 'PTRACCAT_5', 'PTRACCAT_6',
        'BCDEPRES_0.0']
 cont_cols: ['VSWEIGHT', 'VSHEIGHT','MMSCORE', 'TRAASCOR',
        'TRABSCOR', 'TRABERRCOM','MMSCORE', 'TRAASCOR',
-       'TRABSCOR', 'TRABERRCOM','CATANIMSC',"BNTTOTAL",'PTEDUCAT','PTDOBYY']
+       'TRABSCOR', 'TRABERRCOM','CATANIMSC','BNTTOTAL','PTEDUCAT','PTDOBYY']
 
-# "/gpfs/projects/acad/mmfusion/datasets/adni/ADNIDenoise/AD_CN_df.csv"
 
 

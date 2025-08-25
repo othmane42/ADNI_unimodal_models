@@ -141,12 +141,6 @@ class CLIPImageEncoder(BaseEncoder):
         self.freeze_parameters()
 
     def forward(self, x):
-        # if isinstance(x, list)  or len(x.shape)>3:
-        #     images = [self.preprocess(to_pil_image(image.squeeze())).unsqueeze(0).to(self.device) for image in x]
-        #     images = torch.cat(images, 0)
-        # else:
-        #     images = self.preprocess(to_pil_image(x.squeeze())).unsqueeze(0).to(self.device)
-
         with torch.no_grad():
             x = self.features_extractor.encode_image(x.to(self.device))
 

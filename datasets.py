@@ -131,7 +131,6 @@ def get_adni_dataset_new(data_path, cat_cols, cont_cols, target_column,
     le = LabelEncoder()
 
     data_df = pd.read_csv(data_path)
-    # Fit and transform the target column to encode labels as 0 and 1
     data_df[target_column] = le.fit_transform(data_df[target_column])
     data_df[target_column] = data_df[target_column].astype(int)
 
@@ -149,7 +148,6 @@ def get_adni_dataset_new(data_path, cat_cols, cont_cols, target_column,
             col for col in data_df.columns if col not in cols_to_exclude]
         data_df[cols_to_scale] = scaler.fit_transform(data_df[cols_to_scale])
 
-    # data_df = data_df.loc[:,~data_df.columns.duplicated()].copy()
     if patient_based_split:
         # Perform patient-based split
         subjects_df = data_df[[subject_column,
