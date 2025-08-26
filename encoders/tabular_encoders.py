@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-from tab_transformer_pytorch import TabTransformer
 from .common_encoders import BaseEncoder
 from transformers import AutoModel, AutoTokenizer
 

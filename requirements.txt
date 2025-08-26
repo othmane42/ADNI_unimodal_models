@@ -9,3 +9,6 @@ pandas
 matplotlib
 seaborn
 nibabel==5.3.2
+transformers==4.48.1
+ipykernel
+clip

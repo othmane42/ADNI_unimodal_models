@@ -2,7 +2,8 @@
 
 This repo helps you load unimodal models (MRI image or tabular) for ADNI classification and embedding generation.
 
-### Install
+### Installation
+Note : this project uses **Python 3.9.13**.  
 
 ```bash
 pip install -r requirements.txt
